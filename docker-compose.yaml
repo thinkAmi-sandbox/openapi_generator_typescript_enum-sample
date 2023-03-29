@@ -1,0 +1,27 @@
+version: '3'
+services:
+  openapi_typescript_axios_6_3_0:
+    image: openapitools/openapi-generator-cli:v6.3.0
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g typescript-axios -o local/axios/6_3_0
+  openapi_typescript_axios_5_4_0:
+    image: openapitools/openapi-generator-cli:v5.4.0
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g typescript-axios -o local/axios/5_4_0
+  openapi_typescript_axios_5_3_1:
+    image: openapitools/openapi-generator-cli:v5.3.1
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g typescript-axios -o local/axios/5_3_1
+  openapi_typescript_fetch_5_4_0:
+    image: openapitools/openapi-generator-cli:v5.4.0
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g typescript-fetch -o local/fetch/5_4_0
+  openapi_typescript_fetch_6_0_0:
+    image: openapitools/openapi-generator-cli:v6.0.0
+    volumes:
+      - ./:/local
+    command: generate -i local/openapi.yaml -g typescript-fetch -o local/fetch/6_0_0
